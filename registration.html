@@ -40,6 +40,7 @@
             transition: 1s;
         }
 
+
         #main {
             position: absolute;
             width: 600px;
@@ -132,12 +133,12 @@
             }
             else if (pwd.length>=7) {
                 
-                redirText.innerHTML="Successfully Logged in";
+                redirText.innerHTML="Successfully Registered";
                 window.location = "https://node-red-koygq-2022-11-15.eu-gb.mybluemix.net/ui/#!/0?socketid=cwdxJyLthVAKpQqwAAAB";
             }
             else {
                 
-                redirText.innerHTML="Invalid Login Credentials";
+                redirText.innerHTML="Password should be greater than 6 Characters";
             }
         }
         function clearFunc() {
@@ -150,15 +151,15 @@
 
 <body>
     <div class="btn">
-        <a href="registration.html">
-        <button>Register</button></a>
+        <a href="index.html">
+        <button>Login</button></a>
     </div>
     <!-- Main div code -->
     <div id="main">
         
         <div class="h-tag">
             <h2>
-                <center>Login Form</center>
+                <center>Registeration Form</center>
             </h2>
         </div>
         <!-- Login box -->
@@ -169,13 +170,17 @@
                     <td><input type="text" placeholder="Enter user name " id="email" class="tb" /></td>
                 </tr>
                 <tr>
+                    <td>Email:</td>
+                    <td><input type="email" placeholder="Enter user name " id="email" class="tb" /></td>
+                </tr>
+                <tr>
                     <td>Enter Password :</td>
                     <td><input type="password" placeholder="Enter Password " id="pwd1" class="tb" /></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="submit" value="Login" class="btn" onClick="login()" />
+                        <input type="submit" value="Register" class="btn" onClick="login()" />
                     </td>
                 </tr>
             </table>
